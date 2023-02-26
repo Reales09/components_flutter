@@ -24,6 +24,8 @@ class ListView2Screen extends StatelessWidget {
                   onTap: () {
                     final game = options[index];
                     print(game);
+                    Scaffold.of(context)
+                        .showBottomSheet((context) => Text(game));
                   },
                 ),
             separatorBuilder: (_, __) => const Divider(),
