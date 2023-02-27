@@ -15,7 +15,7 @@ class AppRoutes {
         route: 'home',
         name: 'Home Screen',
         scren: const HomeScreen(),
-        icon: Icons.home),
+        icon: Icons.home_outlined),
 
     MenuOption(
         route: 'listview1',
@@ -33,7 +33,7 @@ class AppRoutes {
         route: 'alert',
         name: 'Alerts',
         scren: const AlertScreen(),
-        icon: Icons.notifications),
+        icon: Icons.notifications_none_outlined),
 
     MenuOption(
         route: 'card',
