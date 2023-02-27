@@ -11,7 +11,7 @@ class HomeScreen extends StatelessWidget {
 
     return Scaffold(
         appBar: AppBar(
-          title: const Text('Componentes en Flutter'),
+          title: const Text('Components in Flutter'),
           elevation: 0,
         ),
         body: ListView.separated(
