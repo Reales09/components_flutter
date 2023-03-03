@@ -1,4 +1,5 @@
 import 'package:fl_components/screens/listview2_screen.dart';
+import 'package:fl_components/screens/screens.dart';
 import 'package:flutter/material.dart';
 
 import '../screens/card_screen.dart';
@@ -40,6 +41,12 @@ class AppRoutes {
         name: 'Cards',
         scren: const CardScreen(),
         icon: Icons.credit_card),
+
+    MenuOption(
+        route: 'avatar',
+        name: 'CircleAvatar',
+        scren: const AvatarScreen(),
+        icon: Icons.supervised_user_circle_outlined),
   ];
 
   static Map<String, Widget Function(BuildContext)> getAppRoutes() {

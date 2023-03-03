@@ -78,22 +78,55 @@ class AlertScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: ElevatedButton(
-            // style: ElevatedButton.styleFrom(
-            //     primary: Colors.black,
-            //     shape: const StadiumBorder(),
-            //     elevation: 0),
-            child: const Padding(
-              padding: EdgeInsets.all(10),
-              child: Text(
-                'Mostrar alerta',
-                style: TextStyle(fontSize: 16),
-              ),
-            ),
-            //
-            onPressed: () => Platform.isAndroid
-                ? displayDialogAndroid(context)
-                : displayDialogIOS(context)),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            ElevatedButton(
+                // style: ElevatedButton.styleFrom(
+                //     primary: Colors.black,
+                //     shape: const StadiumBorder(),
+                //     elevation: 0),
+                child: const Padding(
+                  padding: EdgeInsets.all(10),
+                  child: Text(
+                    'Mostrar alerta SO',
+                    style: TextStyle(fontSize: 16),
+                  ),
+                ),
+                //
+                onPressed: () => Platform.isAndroid
+                    ? displayDialogAndroid(context)
+                    : displayDialogIOS(context)),
+            ElevatedButton(
+                // style: ElevatedButton.styleFrom(
+                //     primary: Colors.black,
+                //     shape: const StadiumBorder(),
+                //     elevation: 0),
+                child: const Padding(
+                  padding: EdgeInsets.all(10),
+                  child: Text(
+                    'Mostrar alerta iOS',
+                    style: TextStyle(fontSize: 16),
+                  ),
+                ),
+                //
+                onPressed: () => displayDialogIOS(context)),
+            ElevatedButton(
+                // style: ElevatedButton.styleFrom(
+                //     primary: Colors.black,
+                //     shape: const StadiumBorder(),
+                //     elevation: 0),
+                child: const Padding(
+                  padding: EdgeInsets.all(10),
+                  child: Text(
+                    'Mostrar alerta Android',
+                    style: TextStyle(fontSize: 16),
+                  ),
+                ),
+                //
+                onPressed: () => displayDialogAndroid(context)),
+          ],
+        ),
       ),
       floatingActionButton: FloatingActionButton(
           child: const Icon(Icons.close),
